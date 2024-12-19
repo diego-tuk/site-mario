@@ -14,12 +14,12 @@
 <body>
 
     <div class="caixa-video-mario">
-        <video src="video.mp4" autoplay muted loop></video>
+        <video src="./assets/video.mp4" autoplay muted loop></video>
         <div class="mascara-video"></div>
     </div>
 
     <div class="caixa-principal">
-        <img src="logo.png" alt="logo do super mario" class="logo-mario">
+        <img src="./assets/logo.png" alt="logo do super mario" class="logo-mario">
         <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
         <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
             ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
@@ -27,7 +27,7 @@
         <button onclick="cliqueiNoBotao()">Fale comigo</button>
     </div>
 
-    <img src="mario.png" alt="logo mario e luigi" class="imagem-mario-luigi">
+    <img src="./assets/mario.png" alt="logo mario e luigi" class="imagem-mario-luigi">
 
     <form class="fale-conosco" action="https://formsubmit.co/digosurfstayle@gmail.com" method="POST">
         <input placeholder="Seu nome" type="text" name="nome">
@@ -36,19 +36,23 @@
         <button onclick="sumirFormulario()">Enviar formulário</button>
     </form>
 
-    <div class="mascara-form"></div>
+    <div onclick="cliqueinamascara()" class="mascara-form"></div>
 </body>
 <script>
     let formulario = document.querySelector(".fale-conosco")
     let mascara = document.querySelector(".mascara-form")
 
 
-    function cliqueiNoBotao(){
+    function cliqueiNoBotao() {
         formulario.style.left = "700px"
         mascara.style.visibility = "visible"
     }
+    function cliqueinamascara() {
+        formulario.style.left = "-320px"
+        mascara.style.visibility = "hidden" 
+    }
 
-    function sumirFormulario(){
+    function sumirFormulario() {
         formulario.style.left = "-320px"
         mascara.style.visibility = "hidden"
     }
